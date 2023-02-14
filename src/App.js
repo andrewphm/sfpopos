@@ -1,13 +1,13 @@
 import React from 'react';
 import Title from './components/Title';
-import POPOSList from './components/POPOSList';
 import Footer from './components/Footer';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <Title />
-      <POPOSList />
+      <Outlet />
       <Footer />
     </div>
   );
