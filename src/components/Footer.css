@@ -1,0 +1,14 @@
+footer {
+  text-align: center;
+  background-color: rgb(192, 45, 26);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.footer-title {
+  color: white;
+  font-weight: bold;
+}
