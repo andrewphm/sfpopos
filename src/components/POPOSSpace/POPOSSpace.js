@@ -11,11 +11,17 @@ function POPOSSpace({ name, image, address, hours, id }) {
           width="300"
           height="300"
           alt="Hello"
+          className="POPOSSpace-img"
         />
       </Link>
-      <h1>{name}</h1>
-      <div>{address}</div>
-      <div className="hours">{hours}</div>
+      <Link className="POPOSSpace-title" to={`/details/${id}`}>
+        <h1>{name}</h1>
+      </Link>
+
+      <div className="POPOSSpace-info">
+        <div>{address}</div>
+        <div className="hours">{hours}</div>
+      </div>
     </div>
   );
 }
