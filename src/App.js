@@ -1,6 +1,6 @@
 import React from 'react';
-import Title from './components/Title';
-import Footer from './components/Footer';
+import Title from './components/Title/Title';
+import Footer from './components/Footer/Footer';
 import { Outlet } from 'react-router-dom';
 
 function App() {
