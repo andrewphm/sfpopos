@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router';
 import data from '../../sfpopos-data.json';
 import './POPOSDetails.css';
+import POPOSFeatureList from '../POPOSFeatureList/POPOSFeatureList';
 
 function POPOSDetails(props) {
   const params = useParams();
@@ -17,7 +18,7 @@ function POPOSDetails(props) {
         <h1 className="POPOSDetails-title">{title}</h1>
         <p className="POPOSDetails-desc">{desc}</p>
         <p className="POPOSDetails-hours">{hours}</p>
-        <p className="POPOSDetails-features">{features}</p>
+        <POPOSFeatureList features={features} />
         <p className="POPOSDetails-geo">
           {geo.lat} {geo.lon}
         </p>
