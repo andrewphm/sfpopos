@@ -11,9 +11,6 @@ function POPOSDetails(props) {
 
   return (
     <div className="POPOSDetails">
-      <div className="POPOSDetails-image">
-        <img src={`${process.env.PUBLIC_URL}images/${images[0]}`} />
-      </div>
       <div className="POPOSDetails-info">
         <h1 className="POPOSDetails-title">{title}</h1>
         <p className="POPOSDetails-desc">{desc}</p>
@@ -22,6 +19,9 @@ function POPOSDetails(props) {
         <p className="POPOSDetails-geo">
           {geo.lat} {geo.lon}
         </p>
+      </div>
+      <div className="POPOSDetails-image">
+        <img className="" src={`${process.env.PUBLIC_URL}images/${images[0]}`} />
       </div>
     </div>
   );

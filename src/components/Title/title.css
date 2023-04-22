@@ -1,14 +1,13 @@
 .title {
-  box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1em;
-  margin-bottom: 2em;
   background-color: rgb(192, 45, 26);
   color: #fff;
+  position: relative;
 }
 
 .title-subtitle {
@@ -26,4 +25,53 @@
 .links .nav-link-active {
   color: #fff;
   border-bottom: 2px solid;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-line {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+@media (max-width: 768px) {
+  .title-subtitle,
+  .links {
+    display: none;
+  }
+
+  .title {
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 100;
+  }
+
+  .title h1 {
+    font-size: 1.2rem;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .links.mobile-menu-visible {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(192, 45, 26);
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .links.mobile-menu-visible a {
+    display: block;
+    margin-bottom: 10px;
+  }
 }

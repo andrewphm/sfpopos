@@ -6,6 +6,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './components/About/About';
 import POPOSList from './components/POPOSList/POPOSList';
 import POPOSDetails from './components/POPOSDetails/POPOSDetails';
+import Signup from './components/Signup/Signup';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
       <Route path="/" element={<App />}>
         <Route path="/" element={<POPOSList />} />
         <Route path="about" element={<About />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/details/:id" element={<POPOSDetails />} />
       </Route>
     </Routes>
