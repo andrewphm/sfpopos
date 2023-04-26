@@ -11,6 +11,7 @@ function RandomSpace() {
         const id = Math.floor(Math.random() * data.length);
         navigate(`/details/${id}`);
       }}
+      aria-label="Show me a random space"
     >
       Show me a random space
     </button>

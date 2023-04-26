@@ -4,25 +4,25 @@ import { Link } from 'react-router-dom';
 
 function POPOSSpace({ name, image, address, hours, id }) {
   return (
-    <div className="POPOSSpace">
+    <article className="POPOSSpace" aria-labelledby={`title-of-space-${name}`}>
       <Link to={`/details/${id}`}>
         <img
           src={`${process.env.PUBLIC_URL}/images/${image}`}
           width="300"
           height="300"
-          alt="Hello"
+          alt={`An exterior view of the ${name}`}
           className="POPOSSpace-img"
         />
       </Link>
-      <Link className="POPOSSpace-title" to={`/details/${id}`}>
-        <h1>{name}</h1>
+      <Link className="POPOSSpace-title" to={`/details/${id}`} aria-hidden="true">
+        <h1 id={`title-of-space-${name}`}>{name}</h1>
       </Link>
 
       <div className="POPOSSpace-info">
-        <div>{address}</div>
+        <address>{address}</address>
         <div className="hours">{hours}</div>
       </div>
-    </div>
+    </article>
   );
 }
 
